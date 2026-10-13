@@ -1,0 +1,115 @@
+services:
+
+  frontend:
+    build:
+      context: ./client
+      args:
+        VITE_API_URL: /api
+
+    container_name: teamflow-frontend
+
+    ports:
+      - "8080:80"
+      
+    restart: unless-stopped
+
+    depends_on:
+      backend:
+        condition: service_healthy
+
+
+  backend:
+    build: ./server
+
+    container_name: teamflow-backend
+
+    expose:
+      - "3000"
+
+    env_file:
+      - ./server/.env
+
+    environment:
+      NODE_ENV: production
+
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: teamflow
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+
+      REDIS_URL: redis://redis:6379
+
+      CLIENT_ORIGIN: http://localhost:8080
+
+    restart: unless-stopped
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+      redis:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "const net=require('net');const s=net.connect(3000,'127.0.0.1',()=>{s.end();process.exit(0)});s.on('error',()=>process.exit(1));"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  postgres:
+    image: postgres:16-alpine
+
+    container_name: teamflow-postgres
+
+    environment:
+      POSTGRES_DB: teamflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    volumes:
+      - teamflow-postgres-data:/var/lib/postgresql/data
+    
+    restart: unless-stopped
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U postgres -d teamflow"
+        ]
+
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+  redis:
+    image: redis:7-alpine
+
+    container_name: teamflow-redis
+    
+    restart: unless-stopped
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "redis-cli",
+          "ping"
+        ]
+
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+
+volumes:
+  teamflow-postgres-data:
