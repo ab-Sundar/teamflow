@@ -2,12 +2,14 @@ const bcrypt = require("bcrypt");
 const pool = require("../db/pool");
 const jwt = require("jsonwebtoken");
 
+const env = require("../config/env");
+
 const registerUser = async ({ name, email, password }) => {
   const normalizedEmail = email.trim().toLowerCase();
 
   const existingUser = await pool.query(
     "SELECT id FROM users WHERE email = $1",
-    [normalizedEmail]
+    [normalizedEmail],
   );
 
   if (existingUser.rows.length > 0) {
@@ -24,12 +26,11 @@ const registerUser = async ({ name, email, password }) => {
     VALUES ($1, $2, $3)
     RETURNING id, name, email, created_at
     `,
-    [name.trim(), normalizedEmail, passwordHash]
+    [name.trim(), normalizedEmail, passwordHash],
   );
 
   return result.rows[0];
 };
-
 
 const loginUser = async ({ email, password }) => {
   const normalizedEmail = email.trim().toLowerCase();
@@ -40,7 +41,7 @@ const loginUser = async ({ email, password }) => {
     FROM users
     WHERE email = $1
     `,
-    [normalizedEmail]
+    [normalizedEmail],
   );
 
   const user = result.rows[0];
@@ -51,10 +52,7 @@ const loginUser = async ({ email, password }) => {
     throw error;
   }
 
-  const passwordMatches = await bcrypt.compare(
-    password,
-    user.password_hash
-  );
+  const passwordMatches = await bcrypt.compare(password, user.password_hash);
 
   if (!passwordMatches) {
     const error = new Error("Invalid email or password");
@@ -66,10 +64,10 @@ const loginUser = async ({ email, password }) => {
     {
       userId: user.id,
     },
-    process.env.JWT_SECRET,
+    env.jwtSecret,
     {
-      expiresIn: process.env.JWT_EXPIRES_IN,
-    }
+      expiresIn: env.jwtExpiresIn,
+    },
   );
 
   return {
@@ -89,7 +87,7 @@ const getUserById = async (userId) => {
     FROM users
     WHERE id = $1
     `,
-    [userId]
+    [userId],
   );
 
   if (result.rows.length === 0) {
@@ -104,5 +102,5 @@ const getUserById = async (userId) => {
 module.exports = {
   registerUser,
   loginUser,
-  getUserById
+  getUserById,
 };

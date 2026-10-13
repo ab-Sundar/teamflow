@@ -2,7 +2,6 @@
 -- PostgreSQL database dump
 --
 
-\restrict ZJat459hGuQ9OtfWe3zZHeg4u7iBFKMdro5bmlaLiYgvKjdcf7OPeyn7Tzjds01
 
 -- Dumped from database version 18.3
 -- Dumped by pg_dump version 18.3
@@ -39,7 +38,7 @@ CREATE TABLE public.activities (
 );
 
 
-ALTER TABLE public.activities OWNER TO postgres;
+
 
 --
 -- Name: activities_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -53,7 +52,7 @@ CREATE SEQUENCE public.activities_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.activities_id_seq OWNER TO postgres;
+
 
 --
 -- Name: activities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -76,7 +75,7 @@ CREATE TABLE public.boards (
 );
 
 
-ALTER TABLE public.boards OWNER TO postgres;
+
 
 --
 -- Name: boards_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -90,7 +89,6 @@ CREATE SEQUENCE public.boards_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.boards_id_seq OWNER TO postgres;
 
 --
 -- Name: boards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -117,7 +115,6 @@ CREATE TABLE public.cards (
 );
 
 
-ALTER TABLE public.cards OWNER TO postgres;
 
 --
 -- Name: cards_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -131,7 +128,6 @@ CREATE SEQUENCE public.cards_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.cards_id_seq OWNER TO postgres;
 
 --
 -- Name: cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -154,7 +150,7 @@ CREATE TABLE public.comments (
 );
 
 
-ALTER TABLE public.comments OWNER TO postgres;
+
 
 --
 -- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -168,7 +164,7 @@ CREATE SEQUENCE public.comments_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.comments_id_seq OWNER TO postgres;
+
 
 --
 -- Name: comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -191,7 +187,7 @@ CREATE TABLE public.lists (
 );
 
 
-ALTER TABLE public.lists OWNER TO postgres;
+
 
 --
 -- Name: lists_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -205,7 +201,7 @@ CREATE SEQUENCE public.lists_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.lists_id_seq OWNER TO postgres;
+
 
 --
 -- Name: lists_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -228,7 +224,7 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO postgres;
+
 
 --
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -242,7 +238,7 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.users_id_seq OWNER TO postgres;
+
 
 --
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -265,7 +261,7 @@ CREATE TABLE public.workspace_members (
 );
 
 
-ALTER TABLE public.workspace_members OWNER TO postgres;
+
 
 --
 -- Name: workspace_members_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -279,7 +275,7 @@ CREATE SEQUENCE public.workspace_members_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.workspace_members_id_seq OWNER TO postgres;
+
 
 --
 -- Name: workspace_members_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -301,7 +297,7 @@ CREATE TABLE public.workspaces (
 );
 
 
-ALTER TABLE public.workspaces OWNER TO postgres;
+
 
 --
 -- Name: workspaces_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -315,7 +311,7 @@ CREATE SEQUENCE public.workspaces_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.workspaces_id_seq OWNER TO postgres;
+
 
 --
 -- Name: workspaces_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -603,5 +599,5 @@ ALTER TABLE ONLY public.workspaces
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ZJat459hGuQ9OtfWe3zZHeg4u7iBFKMdro5bmlaLiYgvKjdcf7OPeyn7Tzjds01
+
 
