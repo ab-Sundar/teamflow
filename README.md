@@ -4,6 +4,11 @@ Teamflow is a production-style, real-time project management application inspire
 
 It was built as a full-stack learning and portfolio project using the PERN stack, with additional focus on real-time communication, caching, authorization, database performance, Docker containerization, and production hardening.
 
+## Live Demo
+
+[Open Teamflow](https://teamflow-whck.onrender.com/)
+
+Trello like application
 ---
 
 ## Features
@@ -534,34 +539,15 @@ Nginx
                    v                 v
               PostgreSQL          Redis
 ```
-
 ---
+## Deployment
 
-## Screenshots
+Teamflow is deployed using:
 
-Screenshots will be added after public deployment.
-
-Suggested screenshots:
-
-1. Login page
-2. Dashboard
-3. Workspace and board view
-4. Trello-style list/card interface
-5. Card details and comments
-6. Workspace member management
-7. Drag-and-drop cards
-8. Two-browser real-time collaboration
-
----
-
-## Live Demo
-
-Public deployment link:
-
-```text
-Coming soon
-```
-
+- Frontend: Render Static Site
+- Backend: Render Web Service
+- PostgreSQL: Neon
+- Redis: Upstash
 ---
 
 ## Learning Goals
