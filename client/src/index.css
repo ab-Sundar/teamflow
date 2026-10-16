@@ -12,44 +12,44 @@
     "Segoe UI",
     sans-serif;
 
-  color: #172033;
-  background: #f5f7fb;
+  color: #1F2A27;
+  background: #F4F6F1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
-  --color-primary: #5b5bd6;
-  --color-primary-dark: #4949bb;
-  --color-primary-light: #ededff;
+  --color-primary: #0F766E;
+  --color-primary-dark: #0B5E57;
+  --color-primary-light: #DDF4EF;
 
-  --color-bg: #f5f7fb;
-  --color-surface: #ffffff;
-  --color-surface-soft: #f9fafc;
+  --color-bg: #F4F6F1;
+  --color-surface: #FFFDF8;
+  --color-surface-soft: #F8F8F3;
 
-  --color-text: #172033;
-  --color-text-secondary: #667085;
-  --color-text-muted: #98a2b3;
+  --color-text: #1F2A27;
+  --color-text-secondary: #5F6B65;
+  --color-text-muted: #8C9791;
 
-  --color-border: #e4e7ec;
-  --color-border-strong: #d0d5dd;
+  --color-border: #DDE3DE;
+  --color-border-strong: #C9D2CC;
 
-  --color-success: #027a48;
-  --color-success-bg: #ecfdf3;
+  --color-success: #3A7D44;
+  --color-success-bg: #EAF6EA;
 
-  --color-danger: #b42318;
-  --color-danger-bg: #fef3f2;
+  --color-danger: #B5473C;
+  --color-danger-bg: #FFF0ED;
 
-  --color-warning: #b54708;
-  --color-warning-bg: #fffaeb;
+  --color-warning: #A45A17;
+  --color-warning-bg: #FFF4DA;
 
   --shadow-sm:
-    0 1px 2px rgba(16, 24, 40, 0.05);
+    0 1px 2px rgba(31, 42, 39, 0.05);
 
   --shadow-md:
-    0 4px 14px rgba(16, 24, 40, 0.08);
+    0 4px 14px rgba(31, 42, 39, 0.08);
 
   --shadow-lg:
-    0 16px 40px rgba(16, 24, 40, 0.14);
+    0 16px 40px rgba(31, 42, 39, 0.14);
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -344,7 +344,7 @@ button:disabled {
 }
 
 .button--danger:hover {
-  background: #912018;
+  background: #8F342D;
 }
 
 .button--small {
@@ -368,7 +368,7 @@ label {
 
   margin-bottom: 7px;
 
-  color: #344054;
+  color: #34433E;
   font-size: 14px;
   font-weight: 600;
 }
@@ -398,7 +398,7 @@ select:focus {
 
   box-shadow:
     0 0 0 3px
-    rgba(91, 91, 214, 0.12);
+    rgba(15, 118, 110, 0.12);
 }
 
 input::placeholder,
@@ -547,7 +547,7 @@ select {
 }
 
 .modal-close:hover {
-  background: #eef0f4;
+  background: #EEF1EC;
   color: var(--color-text);
 }
 
@@ -753,7 +753,7 @@ select {
     translateY(-3px);
 
   border-color:
-    #cfd2f5;
+    #A9CBC4;
 
   box-shadow:
     var(--shadow-md);
@@ -854,34 +854,34 @@ select {
 
 .role-badge--owner {
   background:
-    #f4ebff;
+    #F4E9F3;
 
   color:
-    #6941c6;
+    #7D4E7F;
 }
 
 .role-badge--admin {
   background:
-    #eff8ff;
+    #E8F3F1;
 
   color:
-    #175cd3;
+    #146C65;
 }
 
 .role-badge--member {
   background:
-    #ecfdf3;
+    #EAF6EA;
 
   color:
-    #027a48;
+    #3A7D44;
 }
 
 .role-badge--viewer {
   background:
-    #f2f4f7;
+    #EFF2ED;
 
   color:
-    #475467;
+    #52605A;
 }
 
 
@@ -1183,7 +1183,7 @@ select {
     translateY(-2px);
 
   border-color:
-    #cfd2f5;
+    #A9CBC4;
 
   box-shadow:
     var(--shadow-md);
@@ -1385,10 +1385,10 @@ select {
   border-radius: 50%;
 
   background:
-    #eef2ff;
+    #E4F1ED;
 
   color:
-    #4338ca;
+    #196F67;
 
   font-size: 14px;
   font-weight: 700;
@@ -1717,14 +1717,14 @@ select {
 
 .board-canvas::-webkit-scrollbar-thumb {
   background:
-    #d0d5dd;
+    #C9D2CC;
 
   border-radius: 999px;
 }
 
 .board-canvas::-webkit-scrollbar-thumb:hover {
   background:
-    #b8bec8;
+    #AAB4AE;
 }
 
 
@@ -1754,7 +1754,7 @@ select {
     var(--radius-lg);
 
   background:
-    #eef1f6;
+    #E9EEEA;
 
   transition:
     border-color
@@ -1770,14 +1770,14 @@ select {
     var(--color-primary);
 
   background:
-    #f0f0ff;
+    #E0F2EE;
 
   box-shadow:
     0 0 0 3px
     rgba(
-      91,
-      91,
-      214,
+      15,
+      118,
+      110,
       0.1
     );
 }
@@ -1898,7 +1898,7 @@ select {
 
 .task-card:hover {
   border-color:
-    #cfd3dc;
+    #BCC8C2;
 
   box-shadow:
     var(--shadow-md);
@@ -2020,10 +2020,10 @@ select {
     999px;
 
   background:
-    #f2f4f7;
+    #EFF2ED;
 
   color:
-    #475467;
+    #52605A;
 
   font-size: 10px;
   font-weight: 600;
@@ -2051,10 +2051,10 @@ select {
 
 .card-meta-chip--date {
   background:
-    #fff7ed;
+    #FFF1DE;
 
   color:
-    #b54708;
+    #A45A17;
 }
 
 
@@ -2467,10 +2467,10 @@ select {
     999px;
 
   background:
-    #fff7ed;
+    #FFF1DE;
 
   color:
-    #b54708;
+    #A45A17;
 
   font-size: 11px;
   font-weight: 700;
@@ -2541,10 +2541,10 @@ select {
   border-radius: 50%;
 
   background:
-    #eef2ff;
+    #E4F1ED;
 
   color:
-    #4338ca;
+    #196F67;
 
   font-size: 11px;
   font-weight: 800;
@@ -2618,7 +2618,7 @@ select {
     transparent;
 
   color:
-    #912018;
+    #8F342D;
 }
 
 
@@ -2752,9 +2752,9 @@ select {
   background:
     linear-gradient(
       145deg,
-      #171747 0%,
-      #34349c 55%,
-      #5b5bd6 100%
+      #123A35 0%,
+      #0F5D56 55%,
+      #0F766E 100%
     );
 
   color: white;
@@ -2822,7 +2822,7 @@ select {
 
 .auth-visual__content .eyebrow {
   color:
-    #c7d2fe;
+    #B5DDD5;
 }
 
 .auth-visual__content h2 {
@@ -2904,7 +2904,7 @@ select {
     );
 
   color:
-    #d7dcff;
+    #C8E8E1;
 
   font-size: 12px;
   font-weight: 800;
@@ -3085,7 +3085,7 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 3px solid rgba(91, 91, 214, 0.22);
+  outline: 3px solid rgba(15, 118, 110, 0.22);
   outline-offset: 2px;
 }
 
@@ -3098,7 +3098,7 @@ select:disabled {
   cursor: not-allowed;
 
   background:
-    #f2f4f7;
+    #EFF2ED;
 
   color:
     var(--color-text-muted);
